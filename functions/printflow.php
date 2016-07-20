@@ -202,7 +202,7 @@ function writelogfile($serviceid,$header,$data) {
 		} else {
 			$filename=date("Ymd-Hms").".txt";
 		}
-		$outfile=fopen($_SERVER["PWD"].$logdir.$filename,"w");
+		$outfile=fopen($_SERVER["PWD"]."/reportslog/".$filename,"w");
 		fwrite($outfile,$header."\n".$data);
 		fclose($outfile);
 }
