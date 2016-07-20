@@ -80,11 +80,13 @@ $smtp_password="";
 $smtp_fromaddr="app@printflow.dotdeas.se";
 ```
 
-**Change login password?**
+**Change password?**
 ```
-Create a php-file with the included code and open/run it, copy the output to your config.php file and remove the file from the server when you are done
-<?php
-echo hash("sha512",md5(md5("password")));
+1. Create a php-file with the included code and open/run it
+   <?php
+   echo hash("sha512",md5(md5("password")));
+2. Copy the output to your config.php file
+3. Remove the file from the server when you are done
 ```
 
 ## Contact me
