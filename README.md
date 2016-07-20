@@ -66,6 +66,7 @@ POP3 on port 995 with SSL = {mail.dotdeas.se:995/pop3/ssl/novalidate-cert}
 POP3 on port 110 without SSL = {mail.dotdeas.se:110/pop3}
 IMAP on port 993 with SSL = {mail.dotdeas.se:993/imap/ssl/novalidate-cert}
 IMAP on port 143 without SSL = {mail.dotdeas.se:143/imap}
+
 Check http://php.net/manual/en/function.imap-open.php for more information about imap connection string
 ```
 
