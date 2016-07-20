@@ -1,7 +1,7 @@
 PrintFlow
 ======================
 
-A PHP system for collecting and managing alerts and supplyrequest from MPS systems
+A PHP system for collecting and managing alerts and supplyrequests from MPS systems
 
 ## Supported MPS systems
 * 3Manager
@@ -10,7 +10,8 @@ A PHP system for collecting and managing alerts and supplyrequest from MPS syste
 ## Requirements
 * Web server with PHP support (such as Apache, IIS)
 * MySQL 5.0 or newer
-* PHP 5.5 or newer, with session support and CLI
+* PHP 5.5 or newer, with session support
+* PHP CLI module
 * A web browser with cookies and javascript enabled
 
 ## Download
@@ -25,6 +26,7 @@ If you prefer to follow the git repository, the following branch and tag names m
 2. Import printflow.sql in the sql dir to your MySQL server
 3. Make reportslog and log dir writeable
 4. Open and edit config.php
+5. Open and login to your PrintFlow sytsme, default password is 'password'
 
 Sample config.php
 ```
@@ -57,20 +59,27 @@ $password="ff574334c2814795b84a2112dfad89acdff14c7b8b250c9ef19df7d8667ba7a579f1d
 ```
 
 ## FAQ - Frequently Asked Questions
-**Nothing happens when i start the installation?**
-> Check you mysql information and if your user has the correct rights to access the database
+**Using IMAP or POP3?**
+> Here are some imap string examples:
+> POP3 on port 995 with SSL = {mail.dotdeas.se:995/pop3/ssl/novalidate-cert}
+> POP3 on port 110 without SSL = {mail.dotdeas.se:110/pop3}
+> IMAP on port 993 with SSL = {mail.dotdeas.se:993/imap/ssl/novalidate-cert}
+> IMAP on port 143 without SSL = {mail.dotdeas.se:143/imap}
+> Check http://php.net/manual/en/function.imap-open.php for more information about imap connection string
 
-**How do I get randomized usernames and password?**
-> Double click on the username and/or password field and you will get a random generated username and/or password
+**Using SMTP without authentication?**
+> $smtp_host"smtp.dotdeas.se";
+> $smtp_port="25";
+> $smtp_encryption="none";
+> $smtp_auth=false;
+> $smtp_username="";
+> $smtp_password="";
+> $smtp_fromaddr="app@printflow.dotdeas.se";
 
-**CSP stops fetching users when using start-date?**
-> Some versions of csp dont work with start-date. If you need them in cmum, then use genxml options to exclude it from the output to csp.
-
-**Expire-date dosnt work in CSP?**
-> Make sure you are using the ```com.bowman.cardserv.AdvXmlUserManager``` user-manager class.
-
-**The installer cant connect to MySQL server?**
-> Try using ```localhost``` instead of ```127.0.0.1``` if your MySQL server is installed locally
+**Change login password?**
+> Create a php-file with the included code and open/run it, copy the output to your config.php file and remove the file from the server when you are done
+> <?php
+> echo hash("sha512",md5(md5("password")));
 
 ## Contact me
 If you found a bug, got a great idea or just want to say hello. Send me a email on andreas@dotdeas.se
