@@ -60,26 +60,32 @@ $password="ff574334c2814795b84a2112dfad89acdff14c7b8b250c9ef19df7d8667ba7a579f1d
 
 ## FAQ - Frequently Asked Questions
 **Using IMAP or POP3?**
-> Here are some imap string examples:
-> POP3 on port 995 with SSL = {mail.dotdeas.se:995/pop3/ssl/novalidate-cert}
-> POP3 on port 110 without SSL = {mail.dotdeas.se:110/pop3}
-> IMAP on port 993 with SSL = {mail.dotdeas.se:993/imap/ssl/novalidate-cert}
-> IMAP on port 143 without SSL = {mail.dotdeas.se:143/imap}
-> Check http://php.net/manual/en/function.imap-open.php for more information about imap connection string
+```
+Here are some imap string examples:
+POP3 on port 995 with SSL = {mail.dotdeas.se:995/pop3/ssl/novalidate-cert}
+POP3 on port 110 without SSL = {mail.dotdeas.se:110/pop3}
+IMAP on port 993 with SSL = {mail.dotdeas.se:993/imap/ssl/novalidate-cert}
+IMAP on port 143 without SSL = {mail.dotdeas.se:143/imap}
+Check http://php.net/manual/en/function.imap-open.php for more information about imap connection string
+```
 
 **Using SMTP without authentication?**
-> $smtp_host"smtp.dotdeas.se";
-> $smtp_port="25";
-> $smtp_encryption="none";
-> $smtp_auth=false;
-> $smtp_username="";
-> $smtp_password="";
-> $smtp_fromaddr="app@printflow.dotdeas.se";
+```
+$smtp_host"smtp.dotdeas.se";
+$smtp_port="25";
+$smtp_encryption="none";
+$smtp_auth=false;
+$smtp_username="";
+$smtp_password="";
+$smtp_fromaddr="app@printflow.dotdeas.se";
+```
 
 **Change login password?**
-> Create a php-file with the included code and open/run it, copy the output to your config.php file and remove the file from the server when you are done
-> <?php
-> echo hash("sha512",md5(md5("password")));
+```
+Create a php-file with the included code and open/run it, copy the output to your config.php file and remove the file from the server when you are done
+<?php
+echo hash("sha512",md5(md5("password")));
+```
 
 ## Contact me
 If you found a bug, got a great idea or just want to say hello. Send me a email on andreas@dotdeas.se
