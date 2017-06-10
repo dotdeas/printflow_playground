@@ -2,7 +2,7 @@ PrintFlow
 ======================
 
 ## IMPORTANT!!
-### This is project is not maintained anymore! For up-2-date code, visit the refreshed printflow project at http://github.com/dotdeas/printflow/
+### This is project is not maintained anymore!
 
 A PHP system for collecting and managing alerts and supplyrequests from MPS systems
 
@@ -18,7 +18,7 @@ A PHP system for collecting and managing alerts and supplyrequests from MPS syst
 * A web browser with cookies and javascript enabled
 
 ## Download
-You can download the newest release at http://github.com/dotdeas/printflow_old/releases/
+You can download the newest release at http://github.com/dotdeas/printflow/releases/
 
 ## Installation
 1. Upload all the files to your web server
