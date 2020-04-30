@@ -18,7 +18,7 @@ A PHP system for collecting and managing alerts and supplyrequests from MPS syst
 * A web browser with cookies and javascript enabled
 
 ## Download
-You can download the newest release at http://github.com/dotdeas/printflow/releases/
+You can download the newest release at http://github.com/dotdeas/printflow_playground/releases/
 
 ## Installation
 1. Upload all the files to your web server
